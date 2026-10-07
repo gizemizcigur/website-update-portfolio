@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TomurcuKids — Website Update Demo</title>
+  <style>
+    :root{
+      --navy:#24324A;--pink:#F6D9DF;--blue:#DCEAF4;--cream:#FFF9F2;
+      --white:#FFFFFF;--text:#2E3440;--muted:#667085;--radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,sans-serif;color:var(--text);background:var(--cream);line-height:1.55}
+    header{position:sticky;top:0;z-index:20;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid #eee}
+    .brand{font-weight:800;color:var(--navy);letter-spacing:.2px}
+    nav a{color:var(--navy);text-decoration:none;margin-left:18px;font-size:14px}
+    .hero{min-height:68vh;display:grid;place-items:center;text-align:center;padding:72px 8% 56px}
+    .hero h1{font-size:clamp(42px,7vw,78px);line-height:1.02;margin:0 0 16px;color:var(--navy)}
+    .hero p{max-width:650px;margin:0 auto;font-size:clamp(18px,2vw,22px);color:var(--muted)}
+    .blob{width:112px;height:112px;border-radius:46% 54% 55% 45% / 45% 44% 56% 55%;background:linear-gradient(135deg,var(--pink),var(--blue));margin:12px auto 34px;
+      animation: floaty 3s ease-in-out infinite alternate;will-change:transform}
+    /* Fixed: subtle, stable transform with no layout jump */
+    @keyframes floaty{from{transform:translate3d(0,0,0) rotate(-2deg)}to{transform:translate3d(0,-14px,0) rotate(2deg)}}
+    section{padding:64px 6%}
+    .section-title{max-width:760px;margin:0 auto 34px;text-align:center}
+    .section-title h2{margin:0 0 10px;font-size:clamp(30px,4vw,46px);color:var(--navy)}
+    .section-title p{margin:0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:0 auto}
+    .card{background:var(--white);padding:26px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(36,50,74,.07)}
+    .card h3{margin-top:0;color:var(--navy)}
+    .how{background:var(--blue)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:auto}
+    .step{background:white;border-radius:var(--radius);padding:26px}
+    .num{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--pink);font-weight:700;color:var(--navy)}
+    .quote{max-width:860px;margin:auto;background:white;padding:34px;border-radius:var(--radius);font-size:22px;text-align:center;box-shadow:0 10px 30px rgba(36,50,74,.07)}
+    .cta{max-width:1000px;margin:auto;background:var(--navy);color:white;border-radius:32px;padding:48px;text-align:center}
+    .cta h2{font-size:clamp(30px,4vw,44px);margin:0 0 12px}
+    .button{display:inline-block;margin-top:12px;padding:13px 22px;border-radius:999px;background:var(--pink);color:var(--navy);text-decoration:none;font-weight:700}
+    footer{padding:28px 6%;background:var(--navy);color:white;text-align:center}
+    @media (max-width:760px){
+      nav{display:none}
+      .hero{min-height:auto;padding-top:56px}
+      section{padding:48px 5%}
+      .grid,.steps{grid-template-columns:1fr}
+      .quote{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="brand">TomurcuKids</div>
+  <nav><a href="#activities">Activities</a><a href="#how">How it works</a><a href="#parents">Parents</a><a href="#start">Start</a></nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <div class="blob" aria-hidden="true"></div>
+      <h1>Playful English for little learners.</h1>
+      <p>Simple activities designed to make everyday English feel natural, playful and easy to start.</p>
+    </div>
+  </section>
+
+  <!-- Added section 1 -->
+  <section id="activities">
+    <div class="section-title">
+      <h2>Little activities, real practice.</h2>
+      <p>Short, visual activities children can understand without long explanations.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><h3>Read & Draw</h3><p>Follow a tiny English prompt and turn it into a drawing.</p></article>
+      <article class="card"><h3>What Am I?</h3><p>Use clues, pictures and simple vocabulary to guess the answer.</p></article>
+      <article class="card"><h3>Mini Sudoku</h3><p>Build logic skills with friendly visual puzzles made for children.</p></article>
+    </div>
+  </section>
+
+  <!-- Added section 2 -->
+  <section class="how" id="how">
+    <div class="section-title">
+      <h2>How it works</h2>
+      <p>Keep it short, repeatable and easy to fit into everyday life.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Choose</h3><p>Pick one small activity.</p></div>
+      <div class="step"><div class="num">2</div><h3>Play</h3><p>Spend 10–15 minutes together.</p></div>
+      <div class="step"><div class="num">3</div><h3>Repeat</h3><p>Bring the same phrases into daily routines.</p></div>
+    </div>
+  </section>
+
+  <!-- Added section 3 -->
+  <section id="parents">
+    <div class="section-title"><h2>Made for real family routines.</h2></div>
+    <div class="quote">“The goal isn’t a perfect lesson. It’s helping English become one more natural part of the day.”</div>
+  </section>
+
+  <!-- Added section 4 -->
+  <section id="start">
+    <div class="cta">
+      <h2>One little page a day.</h2>
+      <p>Start with a simple activity and build from there.</p>
+      <a class="button" href="#activities">See activities</a>
+    </div>
+  </section>
+</main>
+
+<footer>Concept portfolio project — Existing Website Update & Responsive Fix</footer>
+</body>
+</html>

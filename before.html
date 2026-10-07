@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TomurcuKids — Before</title>
+  <style>
+    :root{--navy:#24324A;--pink:#F6D9DF;--blue:#DCEAF4;--cream:#FFF9F2;--text:#2E3440}
+    *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:var(--text);background:var(--cream)}
+    header{padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:white}
+    .brand{font-weight:700;color:var(--navy)}
+    .hero{min-height:70vh;display:grid;place-items:center;text-align:center;padding:60px 8%}
+    .hero h1{font-size:clamp(40px,7vw,80px);margin:0 0 12px;color:var(--navy)}
+    .hero p{max-width:620px;font-size:20px;line-height:1.6}
+    .blob{width:120px;height:120px;border-radius:50%;background:var(--pink);margin:28px auto;
+      animation: floaty 1.8s ease-in-out infinite alternate}
+    /* Intentional bug: animation jumps because transform origin + large translate */
+    @keyframes floaty{from{transform:translateY(0) scale(1)}to{transform:translateY(-110px) scale(1.15)}}
+    footer{padding:28px 6%;background:var(--navy);color:white;text-align:center}
+  </style>
+</head>
+<body>
+<header><div class="brand">TomurcuKids</div><div>Play • Learn • Grow</div></header>
+<main>
+  <section class="hero">
+    <div>
+      <div class="blob"></div>
+      <h1>Playful English for little learners.</h1>
+      <p>Simple activities designed to make everyday English feel natural, playful and easy to start.</p>
+    </div>
+  </section>
+</main>
+<footer>Concept portfolio demo — before update</footer>
+</body>
+</html>
